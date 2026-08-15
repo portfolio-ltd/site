@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found — Portfolio Ltd">
+  <div class="container notfound">
+    <h1>404</h1>
+    <p>That page doesn't exist.</p>
+    <a href="/">← Back to Portfolio Ltd</a>
+  </div>
+</Base>
+
+<style>
+  .notfound {
+    text-align: center;
+    padding: 140px 24px;
+  }
+
+  .notfound h1 {
+    font-size: 4rem;
+    color: var(--text-tertiary);
+  }
+
+  .notfound p {
+    color: var(--text-secondary);
+    margin: 12px 0 20px;
+  }
+</style>

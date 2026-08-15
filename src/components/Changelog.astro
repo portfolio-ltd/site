@@ -1,0 +1,79 @@
+---
+interface Props {
+  changelog: { version: string; date: string; notes: string[] }[];
+}
+
+const { changelog } = Astro.props;
+---
+
+{
+  changelog.length > 0 && (
+    <div class="changelog">
+      {changelog.map((release) => (
+        <div class="release">
+          <div class="release-meta">
+            <span class="release-version">v{release.version}</span>
+            <span class="release-date">{release.date}</span>
+          </div>
+          <ul>
+            {release.notes.map((note) => (
+              <li>{note}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .changelog {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-left: 2px solid var(--border);
+    padding-left: 24px;
+  }
+
+  .release {
+    position: relative;
+  }
+
+  .release::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .release-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .release-version {
+    font-weight: 650;
+    font-size: 0.98rem;
+  }
+
+  .release-date {
+    color: var(--text-tertiary);
+    font-size: 0.84rem;
+  }
+
+  .release ul {
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
+
+  .release li {
+    margin: 3px 0;
+  }
+</style>

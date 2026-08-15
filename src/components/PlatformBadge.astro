@@ -1,0 +1,30 @@
+---
+interface Props {
+  platform: 'ios' | 'android' | 'mac' | 'web';
+}
+
+const labels: Record<Props['platform'], string> = {
+  ios: 'iOS',
+  android: 'Android',
+  mac: 'Mac',
+  web: 'Web',
+};
+
+const { platform } = Astro.props;
+---
+
+<span class="platform-badge">{labels[platform]}</span>
+
+<style>
+  .platform-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+</style>

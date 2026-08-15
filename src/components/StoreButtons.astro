@@ -1,0 +1,86 @@
+---
+interface Props {
+  storeLinks: {
+    appStore?: string;
+    playStore?: string;
+    macAppStore?: string;
+  };
+  platforms: ('ios' | 'android' | 'mac' | 'web')[];
+}
+
+const { storeLinks, platforms } = Astro.props;
+
+const buttons = [
+  { href: storeLinks.appStore, label: 'Download on the', store: 'App Store' },
+  { href: storeLinks.playStore, label: 'Get it on', store: 'Google Play' },
+  { href: storeLinks.macAppStore, label: 'Download on the', store: 'Mac App Store' },
+].filter((b) => b.href);
+
+const comingSoon: string[] = [];
+if (!storeLinks.appStore && platforms.includes('ios')) comingSoon.push('App Store');
+if (!storeLinks.playStore && platforms.includes('android')) comingSoon.push('Google Play');
+if (!storeLinks.macAppStore && platforms.includes('mac')) comingSoon.push('Mac App Store');
+---
+
+<div class="store-buttons">
+  {
+    buttons.map((b) => (
+      <a class="store-btn" href={b.href} target="_blank" rel="noopener">
+        <span class="store-btn-label">{b.label}</span>
+        <span class="store-btn-store">{b.store}</span>
+      </a>
+    ))
+  }
+  {
+    comingSoon.map((store) => (
+      <span class="store-btn coming-soon">
+        <span class="store-btn-label">Coming soon to the</span>
+        <span class="store-btn-store">{store}</span>
+      </span>
+    ))
+  }
+</div>
+
+<style>
+  .store-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .store-btn {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 10px;
+    background: var(--text);
+    color: #fff;
+    line-height: 1.2;
+    min-width: 150px;
+  }
+
+  .store-btn:hover {
+    text-decoration: none;
+    opacity: 0.85;
+  }
+
+  .store-btn-label {
+    font-size: 0.66rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .store-btn-store {
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+
+  .coming-soon {
+    background: var(--bg-subtle);
+    color: var(--text-tertiary);
+    border: 1px dashed var(--border);
+    cursor: default;
+  }
+</style>

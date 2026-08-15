@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Portfolio Ltd — thoughtfully crafted apps for iOS, Android and Mac.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="brand">Portfolio&nbsp;Ltd</a>
+        <nav class="site-nav">
+          <a href="/#apps">Apps</a>
+          <a href="/#open-source">Open Source</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© {new Date().getFullYear()} Portfolio Ltd. All rights reserved.</span>
+        <span>
+          <a href="mailto:hello@sagarchandagarwal.com">hello@sagarchandagarwal.com</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

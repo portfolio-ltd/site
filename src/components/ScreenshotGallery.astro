@@ -1,0 +1,60 @@
+---
+interface Props {
+  screenshots: { src: string; alt: string; kind: 'phone' | 'desktop' }[];
+  name: string;
+}
+
+const { screenshots, name } = Astro.props;
+---
+
+{
+  screenshots.length > 0 && (
+    <div class="gallery" aria-label={`${name} screenshots`}>
+      {screenshots.map((s) => (
+        <img src={s.src} alt={s.alt} class={s.kind} loading="lazy" />
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .gallery {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 4px 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery img {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+  }
+
+  .gallery img.phone {
+    height: 480px;
+    width: auto;
+  }
+
+  /* Wide Mac/desktop captures: shorter height so they don't dominate the row */
+  .gallery img.desktop {
+    height: 340px;
+    width: auto;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .gallery img.phone {
+      height: 380px;
+    }
+
+    .gallery img.desktop {
+      height: 220px;
+    }
+  }
+</style>

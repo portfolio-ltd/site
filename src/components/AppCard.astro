@@ -1,0 +1,73 @@
+---
+import PlatformBadge from './PlatformBadge.astro';
+
+interface Props {
+  slug: string;
+  name: string;
+  tagline: string;
+  icon: string;
+  platforms: ('ios' | 'android' | 'mac' | 'web')[];
+}
+
+const { slug, name, tagline, icon, platforms } = Astro.props;
+---
+
+<a class="app-card" href={`/apps/${slug}/`}>
+  <img class="app-icon" src={icon} alt={`${name} icon`} width="64" height="64" loading="lazy" />
+  <div class="app-card-body">
+    <h3>{name}</h3>
+    <p>{tagline}</p>
+    <div class="badges">
+      {platforms.map((p) => <PlatformBadge platform={p} />)}
+    </div>
+  </div>
+</a>
+
+<style>
+  .app-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    box-shadow: var(--shadow-card);
+    color: inherit;
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .app-card:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: #d8dade;
+  }
+
+  .app-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 15px;
+    flex-shrink: 0;
+  }
+
+  .app-card-body h3 {
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+  }
+
+  .app-card-body p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+</style>

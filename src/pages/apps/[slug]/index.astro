@@ -1,0 +1,154 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import PlatformBadge from '../../../components/PlatformBadge.astro';
+import StoreButtons from '../../../components/StoreButtons.astro';
+import TechStack from '../../../components/TechStack.astro';
+import ScreenshotGallery from '../../../components/ScreenshotGallery.astro';
+import Faq from '../../../components/Faq.astro';
+import Changelog from '../../../components/Changelog.astro';
+
+export async function getStaticPaths() {
+  const apps = await getCollection('apps');
+  return apps.map((app) => ({
+    params: { slug: app.id },
+    props: { app },
+  }));
+}
+
+const { app } = Astro.props;
+const { Content } = await render(app);
+const d = app.data;
+---
+
+<Base title={`${d.name} — Portfolio Ltd`} description={d.tagline}>
+  <article class="container">
+    <header class="app-hero">
+      <img
+        class="app-hero-icon"
+        src={d.icon}
+        alt={`${d.name} icon`}
+        width="96"
+        height="96"
+      />
+      <div>
+        <div class="badges">
+          {d.platforms.map((p) => <PlatformBadge platform={p} />)}
+        </div>
+        <h1>{d.name}</h1>
+        <p class="tagline">{d.tagline}</p>
+        <StoreButtons storeLinks={d.storeLinks} platforms={d.platforms} />
+      </div>
+    </header>
+
+    <ScreenshotGallery screenshots={d.screenshots} name={d.name} />
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      d.techStack.length > 0 && (
+        <section class="app-section">
+          <h2>Built with</h2>
+          <TechStack techStack={d.techStack} />
+        </section>
+      )
+    }
+
+    {
+      d.faq.length > 0 && (
+        <section class="app-section">
+          <h2>Frequently asked questions</h2>
+          <Faq faq={d.faq} />
+        </section>
+      )
+    }
+
+    {
+      d.changelog.length > 0 && (
+        <section class="app-section">
+          <h2>What's new</h2>
+          <Changelog changelog={d.changelog} />
+        </section>
+      )
+    }
+
+    <section class="app-section support-box">
+      <h2>Support & privacy</h2>
+      <p>
+        Need help with {d.name}? Email
+        <a href={`mailto:${d.supportEmail}`}>{d.supportEmail}</a> and I'll get
+        back to you.
+      </p>
+      <p>
+        <a href={`/apps/${app.id}/privacy`}>Read the {d.name} privacy policy →</a>
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  article.container {
+    padding-top: 56px;
+  }
+
+  .app-hero {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-bottom: 48px;
+  }
+
+  .app-hero-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: var(--shadow-card);
+    flex-shrink: 0;
+  }
+
+  .badges {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .app-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+  }
+
+  .tagline {
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+    margin: 6px 0 20px;
+  }
+
+  .app-section {
+    margin-top: 56px;
+  }
+
+  .app-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+
+  .support-box {
+    padding: 28px;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .support-box p {
+    color: var(--text-secondary);
+    margin: 8px 0;
+  }
+
+  @media (max-width: 640px) {
+    .app-hero {
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
+</style>

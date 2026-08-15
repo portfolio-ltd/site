@@ -1,0 +1,200 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import AppCard from '../components/AppCard.astro';
+
+const apps = (await getCollection('apps')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const openSource = [
+  {
+    name: 'AuditSaas',
+    url: 'https://auditsaas.org',
+    description: 'Open-source auditing toolkit for SaaS products.',
+  },
+  {
+    name: 'Gravel',
+    url: 'https://trygravel.com',
+    description: 'Open-source project — check it out at trygravel.com.',
+  },
+];
+---
+
+<Base title="Portfolio Ltd — Apps built with care">
+  <section class="hero">
+    <div class="container">
+      <h1>Apps built with care,<br />one idea at a time.</h1>
+      <p class="hero-sub">
+        Hi, I'm Sagar. I design and build apps in my free time — small, focused
+        tools for everyday life. This is the home for all of them.
+      </p>
+      <a class="hero-cta" href="#apps">Browse the apps ↓</a>
+    </div>
+  </section>
+
+  <section id="apps" class="container">
+    <span class="eyebrow">Apps</span>
+    <h2 class="section-title">Everything I've shipped</h2>
+    <div class="apps-grid">
+      {
+        apps.map((app) => (
+          <AppCard
+            slug={app.id}
+            name={app.data.name}
+            tagline={app.data.tagline}
+            icon={app.data.icon}
+            platforms={app.data.platforms}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="open-source" class="container">
+    <span class="eyebrow">Open Source</span>
+    <h2 class="section-title">Free & open projects</h2>
+    <div class="oss-grid">
+      {
+        openSource.map((project) => (
+          <a class="oss-card" href={project.url} target="_blank" rel="noopener">
+            <h3>{project.name} <span class="oss-arrow">↗</span></h3>
+            <p>{project.description}</p>
+            <span class="oss-url">{project.url.replace('https://', '')}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <div class="contact-box">
+      <h2 class="section-title">Get in touch</h2>
+      <p>
+        Questions, feedback, or a bug to report? I read everything — drop me a
+        line.
+      </p>
+      <a class="contact-btn" href="mailto:hello@sagarchandagarwal.com">
+        hello@sagarchandagarwal.com
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding: 96px 0 72px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5.5vw, 3.2rem);
+    letter-spacing: -0.03em;
+  }
+
+  .hero-sub {
+    max-width: 540px;
+    margin: 20px auto 28px;
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .hero-cta:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+
+  section.container {
+    margin-top: 72px;
+  }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 18px;
+  }
+
+  .oss-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 18px;
+  }
+
+  .oss-card {
+    display: block;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: inherit;
+    box-shadow: var(--shadow-card);
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .oss-card:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .oss-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  .oss-arrow {
+    color: var(--text-tertiary);
+    font-weight: 400;
+  }
+
+  .oss-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .oss-url {
+    font-size: 0.82rem;
+    color: var(--accent);
+  }
+
+  .contact-box {
+    text-align: center;
+    padding: 56px 24px;
+    background: var(--bg-subtle);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+
+  .contact-box p {
+    color: var(--text-secondary);
+    max-width: 440px;
+    margin: 0 auto 24px;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: var(--text);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .contact-btn:hover {
+    text-decoration: none;
+    opacity: 0.85;
+  }
+</style>
