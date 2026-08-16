@@ -5,7 +5,19 @@ platforms: [ios, android]
 order: 4
 icon: /apps/localspend/icon.png
 accent: "#0A1932"
-screenshots: []
+screenshots:
+  - src: /apps/localspend/screenshot-1.png
+    alt: "Home with monthly budget progress and category cards"
+  - src: /apps/localspend/screenshot-2.png
+    alt: "Category spending overview for the month"
+  - src: /apps/localspend/screenshot-3.png
+    alt: "Analytics with income, net cashflow, and month-over-month comparison"
+  - src: /apps/localspend/screenshot-4.png
+    alt: "Spending by category compared to last month"
+  - src: /apps/localspend/screenshot-5.png
+    alt: "Daily spend trend chart with weekly to yearly ranges"
+  - src: /apps/localspend/screenshot-6.png
+    alt: "Category donut chart of monthly spending"
 techStack: [Flutter, Riverpod, Drift (SQLite), On-device LLM (Qwen 2.5), fl_chart]
 supportEmail: hello@sagarchandagarwal.com
 faq:
