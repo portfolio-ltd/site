@@ -5,6 +5,8 @@ platforms: [ios]
 order: 2
 icon: /apps/nutritrack/icon.png
 accent: "#22B455"
+storeLinks:
+  appStore: https://apps.apple.com/us/app/nutritrack-health-hero/id6795206336
 screenshots:
   - src: /apps/nutritrack/screenshot-1.png
     alt: "Home dashboard with daily missions and streak"
@@ -30,7 +32,7 @@ faq:
   - q: "Is my food diary private? Is it free?"
     a: "Your diary, profile, and account live entirely on your device — there's no server. And yes, NutriTrack is completely free: no subscription, no ads, no locked features."
 changelog:
-  - version: "1.0 (in development)"
+  - version: "1.0"
     date: "2026-08-14"
     notes:
       - "Fiber tracking and widget fixes"
@@ -43,7 +45,7 @@ changelog:
 
 NutriTrack is a gamified nutrition tracker for iPhone that makes eating well feel like a game you want to keep playing. Daily missions, streaks, points, and badges reward consistency, while an Indian-first food database — roti, dal, paneer, biryani, with regional names like "dahi" and "chaas" understood — makes logging real meals actually fast.
 
-Everything lives on your device: your account, your diary, your progress. No server, no subscription, no ads. Currently in development, coming to the App Store.
+Everything lives on your device: your account, your diary, your progress. No server, no subscription, no ads.
 
 ## How it works
 

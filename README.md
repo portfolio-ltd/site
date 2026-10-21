@@ -15,7 +15,7 @@ npm run preview  # preview the production build
 
 ## How to add a new app
 
-1. **Create the content file** — copy any file in `src/content/apps/` (e.g. `streaks.md`) to `src/content/apps/<slug>.md`. The filename is the URL slug (`/apps/<slug>/`). Edit the frontmatter (name, tagline, platforms, order, techStack, faq, changelog, storeLinks) and the markdown body ("What it is" / "How it works").
+1. **Create the content file** — copy any file in `src/content/apps/` (e.g. `notchday.md`) to `src/content/apps/<slug>.md`. The filename is the URL slug (`/apps/<slug>/`). Edit the frontmatter (name, tagline, platforms, order, techStack, faq, changelog, storeLinks) and the markdown body ("What it is" / "How it works").
 2. **Add the privacy policy** — copy a file in `src/content/privacy/` to `src/content/privacy/<slug>.md` (same slug!). It renders at `/apps/<slug>/privacy`.
 3. **Add assets** — put `icon.svg` (or `.png`, update the frontmatter path) and `screenshot-*.png/svg` in `public/apps/<slug>/`, and reference them in the frontmatter.
 
