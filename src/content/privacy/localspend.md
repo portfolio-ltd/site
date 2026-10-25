@@ -29,7 +29,7 @@ You can disconnect an account in Settings at any time. You can also revoke acces
 
 ## On-device AI assistant (optional)
 
-The "Ask" feature uses a language model that runs entirely on your phone. Turning it on triggers a **one-time download of the model file** (about 1.5 GB) from Hugging Face's servers. The download contains no information about you, and your questions and answers are processed offline, on your phone.
+The "Ask" feature uses a language model that runs entirely on your phone. Turning it on triggers a **one-time download of the model file** (about 550 MB, or 1.6 GB if you choose the larger model) from Hugging Face's servers. The download contains no information about you, and your questions and answers are processed offline, on your phone.
 
 ## Other network activity
 
