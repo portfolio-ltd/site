@@ -33,11 +33,11 @@ const d = app.data;
       />
       <div>
         <div class="badges">
-          {d.platforms.map((p) => <PlatformBadge platform={p} />)}
+          {d.platforms.map((p) => <PlatformBadge platform={p} shaded={d.shadedPlatforms.includes(p)} />)}
         </div>
         <h1>{d.name}</h1>
         <p class="tagline">{d.tagline}</p>
-        <StoreButtons storeLinks={d.storeLinks} platforms={d.platforms} />
+        <StoreButtons storeLinks={d.storeLinks} platforms={d.platforms} shadedPlatforms={d.shadedPlatforms} />
       </div>
     </header>
 

@@ -6,20 +6,21 @@ interface Props {
     macAppStore?: string;
   };
   platforms: ('ios' | 'android' | 'mac' | 'web')[];
+  shadedPlatforms?: ('ios' | 'android' | 'mac' | 'web')[];
 }
 
-const { storeLinks, platforms } = Astro.props;
+const { storeLinks, platforms, shadedPlatforms = [] } = Astro.props;
 
-const buttons = [
-  { href: storeLinks.appStore, label: 'Download on the', store: 'App Store' },
-  { href: storeLinks.playStore, label: 'Get it on', store: 'Google Play' },
-  { href: storeLinks.macAppStore, label: 'Download on the', store: 'Mac App Store' },
-].filter((b) => b.href);
+const stores = [
+  { platform: 'ios', href: storeLinks.appStore, label: 'Download on the', store: 'App Store' },
+  { platform: 'android', href: storeLinks.playStore, label: 'Get it on', store: 'Google Play' },
+  { platform: 'mac', href: storeLinks.macAppStore, label: 'Download on the', store: 'Mac App Store' },
+] as const;
 
-const comingSoon: string[] = [];
-if (!storeLinks.appStore && platforms.includes('ios')) comingSoon.push('App Store');
-if (!storeLinks.playStore && platforms.includes('android')) comingSoon.push('Google Play');
-if (!storeLinks.macAppStore && platforms.includes('mac')) comingSoon.push('Mac App Store');
+const isShaded = (p: (typeof stores)[number]['platform']) => shadedPlatforms.includes(p);
+const buttons = stores.filter((s) => s.href && !isShaded(s.platform));
+const comingSoon = stores.filter((s) => !s.href && platforms.includes(s.platform) && !isShaded(s.platform)).map((s) => s.store);
+const unavailable = stores.filter((s) => platforms.includes(s.platform) && isShaded(s.platform)).map((s) => s.store);
 ---
 
 <div class="store-buttons">
@@ -35,6 +36,14 @@ if (!storeLinks.macAppStore && platforms.includes('mac')) comingSoon.push('Mac A
     comingSoon.map((store) => (
       <span class="store-btn coming-soon">
         <span class="store-btn-label">Coming soon to the</span>
+        <span class="store-btn-store">{store}</span>
+      </span>
+    ))
+  }
+  {
+    unavailable.map((store) => (
+      <span class="store-btn shaded" aria-disabled="true">
+        <span class="store-btn-label">Currently unavailable on</span>
         <span class="store-btn-store">{store}</span>
       </span>
     ))
@@ -75,6 +84,14 @@ if (!storeLinks.macAppStore && platforms.includes('mac')) comingSoon.push('Mac A
   .store-btn-store {
     font-size: 0.98rem;
     font-weight: 600;
+  }
+
+  .shaded {
+    background: var(--bg-subtle);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border);
+    opacity: 0.55;
+    cursor: default;
   }
 
   .coming-soon {

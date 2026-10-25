@@ -7,9 +7,10 @@ interface Props {
   tagline: string;
   icon: string;
   platforms: ('ios' | 'android' | 'mac' | 'web')[];
+  shadedPlatforms?: ('ios' | 'android' | 'mac' | 'web')[];
 }
 
-const { slug, name, tagline, icon, platforms } = Astro.props;
+const { slug, name, tagline, icon, platforms, shadedPlatforms = [] } = Astro.props;
 ---
 
 <a class="app-card" href={`/apps/${slug}/`}>
@@ -18,7 +19,7 @@ const { slug, name, tagline, icon, platforms } = Astro.props;
     <h3>{name}</h3>
     <p>{tagline}</p>
     <div class="badges">
-      {platforms.map((p) => <PlatformBadge platform={p} />)}
+      {platforms.map((p) => <PlatformBadge platform={p} shaded={shadedPlatforms.includes(p)} />)}
     </div>
   </div>
 </a>

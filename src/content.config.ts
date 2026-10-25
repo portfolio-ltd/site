@@ -7,6 +7,8 @@ const apps = defineCollection({
     name: z.string(),
     tagline: z.string(),
     platforms: z.array(z.enum(['ios', 'android', 'mac', 'web'])),
+    // Platforms listed but not currently available (e.g. paused or closed beta): shown greyed out.
+    shadedPlatforms: z.array(z.enum(['ios', 'android', 'mac', 'web'])).default([]),
     order: z.number().default(99),
     icon: z.string(),
     accent: z.string().default('#3b82f6'),

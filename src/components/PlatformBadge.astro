@@ -1,6 +1,7 @@
 ---
 interface Props {
   platform: 'ios' | 'android' | 'mac' | 'web';
+  shaded?: boolean;
 }
 
 const labels: Record<Props['platform'], string> = {
@@ -10,10 +11,15 @@ const labels: Record<Props['platform'], string> = {
   web: 'Web',
 };
 
-const { platform } = Astro.props;
+const { platform, shaded = false } = Astro.props;
 ---
 
-<span class="platform-badge">{labels[platform]}</span>
+<span
+  class:list={['platform-badge', { shaded }]}
+  title={shaded ? `${labels[platform]} — not available right now` : undefined}
+>
+  {labels[platform]}
+</span>
 
 <style>
   .platform-badge {
@@ -26,5 +32,11 @@ const { platform } = Astro.props;
     font-size: 0.74rem;
     font-weight: 600;
     letter-spacing: 0.02em;
+  }
+
+  .platform-badge.shaded {
+    background: var(--bg-subtle);
+    color: var(--text-tertiary);
+    opacity: 0.7;
   }
 </style>
