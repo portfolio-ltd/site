@@ -30,9 +30,9 @@ That's it — the homepage grid and all pages are generated automatically.
 
   ```yaml
   screenshots:
-    - src: /apps/anchor/screenshot-1.png
+    - src: /apps/commitline/screenshot-1.png
       alt: "Today dashboard"                # phone (default)
-    - src: /apps/anchor/mac-1.png
+    - src: /apps/commitline/mac-1.png
       alt: "Menu bar app on Mac"
       kind: desktop                          # wide capture, rendered shorter
   ```
