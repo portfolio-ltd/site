@@ -1,51 +1,55 @@
 ---
 app: "LocalSpend"
-lastUpdated: "2026-08-15"
+lastUpdated: "2026-10-25"
 ---
 
 ## Overview
 
-LocalSpend handles some of your most sensitive information — your financial transactions — so it is built to keep that data on your device. This policy explains exactly what the app does, including the few places where it talks to the internet.
+LocalSpend handles some of your most sensitive information, your financial transactions, so it keeps that data on your device. It has no account, no server and no analytics. This policy explains exactly what the app does, including the few times it uses the internet.
 
 ## Data we collect
 
-**We do not collect your personal data.** LocalSpend has no server, no user accounts, no analytics, no crash reporting, and no advertising. Your transactions are never uploaded anywhere.
+**We do not collect your personal data.** LocalSpend has no server, no user accounts, no analytics, no crash reporting and no advertising. Your transactions are never uploaded anywhere, and we never receive them.
 
 ## Data stored on your device
 
-Your transactions, categories, budgets, merchant rules, and settings live in a local database on your phone. Optionally, the original SMS or email text of a transaction can be kept locally so you can review the source. You can protect the app with Face ID / fingerprint lock.
+Your transactions, budget, category rules and settings live in a private database on your phone. For each imported transaction the app also keeps the original SMS text, or a short excerpt of the email, so you can see where it came from. If you connect Gmail, the app stores the account's email address on your phone to show which account is connected.
 
 ## SMS reading (Android only)
 
-With your permission, LocalSpend reads SMS messages to find bank, card, and UPI transaction alerts. All parsing happens on your device; messages are never transmitted anywhere. Non-transaction messages are ignored.
+With your permission (`READ_SMS`, `RECEIVE_SMS`), LocalSpend reads text messages to find bank, card and UPI transaction alerts. Each message is checked on your phone. OTPs, promotions and personal messages are skipped, and messages are never sent anywhere.
 
 ## Gmail import (optional)
 
-If you connect a Gmail account, LocalSpend uses Google Sign-In with **read-only** Gmail access to fetch bank alert emails to your device, where they are parsed locally. Nothing is uploaded, and LocalSpend cannot send, modify, or delete your email. Google's handling of the sign-in itself is governed by [Google's Privacy Policy](https://policies.google.com/privacy). You can disconnect an account at any time.
+If you connect a Gmail account, LocalSpend uses Google Sign-In to request **read-only** Gmail access (`gmail.readonly`). It reads bank alert emails on your phone to find transactions. It cannot send, change or delete email, and email content is never sent to us or anyone else. Google's handling of the sign-in itself is governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+
+LocalSpend's use and transfer of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Gmail data is used only to show you your own transactions in the app. It is not used for advertising, it is not sold or shared, and no person reads it.
+
+You can disconnect an account in Settings at any time. You can also revoke access at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 
 ## On-device AI assistant (optional)
 
-The "Ask" feature uses a language model that runs entirely on your phone. Enabling it triggers a **one-time download of the model file** (~1.5 GB) from Hugging Face's servers; that download contains no information about you, and no request about your data is ever sent to any AI service. All questions and answers are processed offline, on-device.
+The "Ask" feature uses a language model that runs entirely on your phone. Turning it on triggers a **one-time download of the model file** (about 1.5 GB) from Hugging Face's servers. The download contains no information about you, and your questions and answers are processed offline, on your phone.
 
 ## Other network activity
 
-The app may fetch its display font from Google Fonts on first launch (cached afterwards). No personal data is included in that request.
+There is none. Apart from Gmail import and the optional model download, LocalSpend makes no network requests. Its fonts are built into the app.
 
 ## Exports and backups
 
-CSV exports and encrypted backup files (AES-256, protected by your passphrase) are created on your device and shared only where you choose to send them. Automatic backups are stored locally on your phone.
+CSV exports and backup files are created on your phone. They go only where you choose to send them through the share sheet, such as Drive, Files or email. Automatic backups are stored in the app's private storage on your phone.
 
 ## Permissions
 
-Android: SMS (transaction import), notifications (recurring-payment reminders), biometrics (app lock), boot/alarm (background rescan scheduling). A coarse-location permission may appear in the system listing because of the SMS library the app uses — LocalSpend itself never accesses your location. iOS: Face ID (app lock) only.
+**Android:** SMS (transaction import), notifications (a reminder when a regular payment is due), biometrics (app lock), internet (Gmail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment reminders), and a photo-library notice required by the file picker used to choose a backup to restore. LocalSpend never reads your photos.
 
 ## Data deletion
 
-Deleting the app permanently removes all of your data. There is no server-side copy, because none exists.
+**Settings → Clear all data** deletes every transaction, setting, connected account and on-device backup. Uninstalling the app also removes all of its data. There is no server-side copy, because none exists.
 
 ## Children's privacy
 
-LocalSpend does not knowingly collect any data from anyone, including children under 13.
+LocalSpend is meant for adults managing their own money. It does not knowingly collect any data from anyone, including children under 13.
 
 ## Changes to this policy
 
