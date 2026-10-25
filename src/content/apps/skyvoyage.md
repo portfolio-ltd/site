@@ -25,13 +25,19 @@ faq:
   - q: "Is it on iPhone?"
     a: "Yes — Sky Voyage for iPhone is coming to the App Store soon. The Android version is in closed beta and isn't publicly available right now."
   - q: "Do I need an internet connection to play?"
-    a: "No. The whole game runs offline. Game Center on iPhone and Google Play Games on Android are optional and only power leaderboards and achievements (plus cloud saves on Android)."
+    a: "No. The whole game runs offline. Game Center and iCloud on iPhone, and Google Play Games on Android, are optional: they power leaderboards, achievements and cloud saves."
+  - q: "Will my progress carry over to a new iPhone?"
+    a: "Yes. If you're signed in to iCloud, your levels, coins, unlocks, stars and achievements sync through your own iCloud account and show up when you install Sky Voyage on another iPhone."
+  - q: "What are daily missions?"
+    a: "Every day brings three new missions, like flying a set distance or grabbing power-ups, scaled to how far you usually fly. Each one pays gems and coins, and finishing all three adds a bonus. Find them on the main menu."
   - q: "Are there leaderboards?"
     a: "Yes. On iPhone, Sky Voyage uses Game Center: global leaderboards for farthest flight and high score, and 15 achievements. Open them from Ranks in the game."
   - q: "How do I steer the balloon?"
     a: "Drag anywhere on the screen and the balloon glides toward your finger. Drag up to fire the burner and climb, drag down to vent and drop, or let go to drift slowly down."
   - q: "Why does my fuel run out?"
     a: "Only the burner uses fuel — climbing and holding your height. Sliding sideways or down is free. Grab Fuel Tanks to refill; one always appears when you're running low."
+  - q: "How do I avoid lightning?"
+    a: "Lightning always warns you first: a flickering yellow line and a ⚡ badge mark exactly where it will strike, about a second before it hits. Slide sideways out of the line."
   - q: "How long do power-ups last?"
     a: "Each active power-up shows a countdown ring above your fuel gauge: Shield 12 s (or until it blocks a hit), Coin Magnet 8 s, Speed Boost 5 s and 2× Score 15 s. The ring blinks in the last two seconds."
   - q: "What happens if I touch the ground?"
@@ -47,8 +53,12 @@ changelog:
       - "Nine biomes, including the new Sunset Coast, Volcano Ridge and Aurora Heights"
       - "Game Center leaderboards and 15 achievements"
       - "Countdown timers for every active power-up"
+      - "Daily missions with gem rewards"
+      - "Original music for every sky, plus new sound effects"
+      - "Lightning that warns you before it strikes, and a flag marking your personal best"
+      - "iCloud sync, so your progress follows you to a new iPhone"
       - "Hangar with envelopes, baskets, crew and flags; Shop boosts you can use mid-flight"
-      - "Ranks screen with 12 achievements, levels and gem rewards"
+      - "Ranks screen with 15 achievements, levels and gem rewards"
   - version: "1.0.0 Android (closed beta)"
     date: "2026-07-28"
     notes:
@@ -68,7 +78,8 @@ It's built the old-school way, on hand-written 2D engines: native Swift and Swif
 
 1. **Fly.** Drag anywhere and the balloon glides toward your finger. Drag up to fire the burner and climb, drag down to vent, or let go to drift.
 2. **Mind the burner.** Only climbing burns fuel. Collect Fuel Tanks to keep going, and if the basket touches the ground you get a moment to lift off.
-3. **Survive the biomes.** Each zone brings new hazards — kites, hail, nets, embers, ice crystals, lightning — and its own wind. Fly through a zone to unlock the next one as a starting point on the World Map.
+3. **Survive the biomes.** Each zone brings new hazards — kites, hail, nets, embers, ice crystals, lightning (always telegraphed) — and its own wind. Fly through a zone to unlock the next one as a starting point on the World Map.
 4. **Grab power-ups.** Fuel Tanks, Shield Bubbles, Speed Boosts, Coin Magnets and 2× Score keep a good run alive — each shows a countdown — and the ⚡ button slows time when it gets tight.
 5. **Make it yours.** Spend the coins and gems you earn in the Hangar on envelopes, baskets, crew and flags — some with fuel or coin bonuses.
-6. **Compete.** Track your levels and achievements in Ranks, and compare flights on Game Center leaderboards.
+6. **Come back daily.** Three new missions each day pay out bonus gems, and a flag in the sky shows the personal best you're chasing.
+7. **Compete.** Track your levels and achievements in Ranks, and compare flights on Game Center leaderboards.

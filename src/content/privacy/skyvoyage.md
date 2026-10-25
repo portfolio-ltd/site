@@ -13,11 +13,13 @@ Sky Voyage is a casual arcade game for iPhone and Android, built to be played, n
 
 ## Data stored on your device
 
-Your player profile — pilot name, progress, coins, gems, unlocked cosmetics, zone stars, achievements and settings — is stored locally on your device. Deleting the app (or using "Reset All Progress" in Settings) removes it. On iPhone, this data may be included in your own device backups, which Apple handles.
+Your player profile — pilot name, progress, coins, gems, unlocked cosmetics, zone stars, achievements, daily missions and settings — is stored locally on your device. Deleting the app removes it from the device, and "Reset All Progress" in Settings erases it. On iPhone, this data may be included in your own device backups, which Apple handles.
 
 ## Sky Voyage for iPhone
 
-The iPhone version uses no third-party services or SDKs and makes no network connections of its own. It requests no permissions — no location, camera, contacts, photos, tracking or notifications. Haptic feedback can be turned off in Settings.
+The iPhone version uses no third-party services or SDKs and makes no network connections to us or anyone else; the only online features are Apple's own iCloud and Game Center, described below. It requests no permissions — no location, camera, contacts, photos, tracking or notifications. Haptic feedback can be turned off in Settings.
+
+**iCloud (optional).** If you're signed in to iCloud, Sky Voyage also saves your player profile to your own iCloud account (iCloud key-value storage), so your progress syncs to your other devices. It is stored by Apple under [Apple's Privacy Policy](https://www.apple.com/legal/privacy/), and we cannot access it. "Reset All Progress" overwrites the iCloud copy too. You can turn iCloud off for Sky Voyage in your device's Settings.
 
 **Game Center (optional).** If you're signed in to Game Center on your device, Sky Voyage sends your best distance and score to Game Center leaderboards and records the achievements you unlock. This is handled by Apple under [Apple's Privacy Policy](https://www.apple.com/legal/privacy/); we do not receive or store your Game Center data. If you're not signed in, nothing is sent and the game works fully offline. You can manage Game Center in your device's Settings.
 
