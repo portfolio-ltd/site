@@ -17,7 +17,9 @@ Your player profile — pilot name, progress, coins, gems, unlocked cosmetics, z
 
 ## Sky Voyage for iPhone
 
-The iPhone version makes no network connections at all. It uses no third-party services or SDKs, does not use Game Center, and requests no permissions — no location, camera, contacts, photos, tracking or notifications. Haptic feedback can be turned off in Settings.
+The iPhone version uses no third-party services or SDKs and makes no network connections of its own. It requests no permissions — no location, camera, contacts, photos, tracking or notifications. Haptic feedback can be turned off in Settings.
+
+**Game Center (optional).** If you're signed in to Game Center on your device, Sky Voyage sends your best distance and score to Game Center leaderboards and records the achievements you unlock. This is handled by Apple under [Apple's Privacy Policy](https://www.apple.com/legal/privacy/); we do not receive or store your Game Center data. If you're not signed in, nothing is sent and the game works fully offline. You can manage Game Center in your device's Settings.
 
 ## Sky Voyage for Android
 
