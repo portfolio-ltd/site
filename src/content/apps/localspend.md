@@ -4,36 +4,45 @@ tagline: "Your spending, tracked automatically — and privately."
 platforms: [ios, android]
 order: 4
 icon: /apps/localspend/icon.png
-accent: "#0A1932"
+accent: "#8B5CF6"
 screenshots:
   - src: /apps/localspend/screenshot-1.png
-    alt: "Home: this month's spend against the budget and where it went by category"
+    alt: "Every rupee, sorted: the month's spend against the budget, with the ledger below"
   - src: /apps/localspend/screenshot-2.png
-    alt: "The monthly ledger, every transaction grouped by day"
+    alt: "See where it all went: Insights with budget health and a daily spending chart"
   - src: /apps/localspend/screenshot-3.png
-    alt: "Insights: month vs last month, daily spending chart and category changes"
+    alt: "Private by design: bank alerts are filed, everything else is skipped, with no account and no server"
   - src: /apps/localspend/screenshot-4.png
-    alt: "Six-month trend of spending and income, and detected recurring payments"
+    alt: "Every payment, your way: a transaction with its category, split bill and receipt options"
   - src: /apps/localspend/screenshot-5.png
-    alt: "A transaction with its category, details and the original bank message"
+    alt: "Cash spend? Two taps: adding an expense by hand"
   - src: /apps/localspend/screenshot-6.png
-    alt: "Home in dark mode"
-techStack: [Flutter, Riverpod, Drift (SQLite), On-device LLM (Qwen 2.5), fl_chart]
+    alt: "Lovely after dark: the ledger in dark mode"
+techStack: [Flutter, Riverpod, Drift (SQLite), On-device LLM (Qwen3), fl_chart]
 supportEmail: hello@sagarchandagarwal.com
 faq:
   - q: "Does LocalSpend connect to my bank?"
-    a: "No — and that's the point. It never asks for bank credentials or uses an account aggregator. Instead it reads the transaction alerts your bank already sends you (SMS on Android, Gmail alerts on both platforms) and parses them entirely on your device."
+    a: "No — and that's the point. It never asks for bank credentials or uses an account aggregator. Instead it reads the transaction alerts your bank already sends you (SMS on Android, bank alert emails on both platforms) and parses them entirely on your device."
   - q: "How does it work on iPhone?"
-    a: "iOS doesn't let apps read SMS, so on iPhone LocalSpend imports from your Gmail bank alerts (read-only access, parsed on-device) plus manual entry. On Android you get SMS auto-import too."
+    a: "iOS doesn't let apps read SMS, so on iPhone and iPad LocalSpend reads your bank alert emails instead: Gmail with read-only access, or iCloud, Yahoo, Zoho and other mailboxes with an app password. You can also share an alert from Messages or Mail, set up a Shortcuts automation, or add a spend by hand. On Android you get SMS auto-import too."
   - q: "Is the AI assistant private?"
-    a: "Yes. The 'Ask' feature runs a small language model entirely on your phone. It's an optional one-time download (~1.5 GB); after that, questions like 'what did I spend on food this month?' are answered offline. Your transactions never leave the device."
+    a: "Yes. The 'Ask' feature runs a small language model entirely on your phone. It's off by default and an optional one-time download (about 610 MB); after that, questions like 'what did I spend on food this month?' are answered offline. Your transactions never leave the device."
   - q: "Which banks and currencies are supported?"
     a: "LocalSpend is built for India: it understands alerts from major banks (HDFC, SBI, ICICI, Axis, Kotak and more) and UPI apps (GPay, PhonePe, Paytm, BHIM), and tracks amounts in ₹ INR."
   - q: "Can I export or back up my data?"
-    a: "Yes — export everything to CSV, or back up to a file you save anywhere (Drive, Files, email) and restore it on any phone. Automatic backups can also run daily, weekly or monthly on your device."
+    a: "Yes — export everything to CSV, or back up to a file you save anywhere (Drive, Files, email) and restore it on any phone. Automatic backups run on your device: daily, weekly or monthly on Android, and once a day when you open the app on iPhone."
   - q: "Is it free?"
     a: "Completely free. No ads, no in-app purchases, no subscription."
 changelog:
+  - version: "2.9.0"
+    date: "2026-11-13"
+    notes:
+      - "New violet look, and a quicker start: four screens, with your own numbers on the last one"
+      - "Bill and budget alerts you can switch on in Settings"
+      - "More bank alerts recognised, and fewer false ones from shops and friends"
+      - "Other mailboxes (iCloud, Yahoo, Zoho), receipt photos and split bills"
+      - "Exports leave out hidden duplicates; iPad sharing fixed"
+      - "Clear all data now removes every trace, including the Ask model"
   - version: "2.8.0"
     date: "2026-10-25"
     notes:
@@ -67,15 +76,15 @@ changelog:
 
 ## What it is
 
-LocalSpend is a privacy-first expense tracker built for India. Instead of asking you to type in every chai and auto ride, it builds your ledger automatically — parsing the transaction SMS and Gmail alerts your bank already sends, entirely on your device. No bank logins, no server, no account, no analytics.
+LocalSpend is a privacy-first expense tracker built for India. Instead of asking you to type in every chai and auto ride, it builds your ledger automatically — parsing the transaction SMS and email alerts your bank already sends, entirely on your device. No bank logins, no server, no account, no analytics.
 
 It categorises transactions against 670+ known merchants, watches your monthly budget, detects recurring payments and subscriptions, and can even answer questions about your spending with an AI that runs completely offline.
 
 ## How it works
 
-1. **Connect your alerts.** Grant SMS access on Android and/or connect Gmail (read-only) on either platform. LocalSpend recognises alerts from major Indian banks, cards, and UPI apps.
+1. **Connect your alerts.** Grant SMS access on Android, or connect the inbox your bank writes to: Gmail (read-only) or another mailbox, on either platform. LocalSpend recognises alerts from major Indian banks, cards, and UPI apps.
 2. **Watch the ledger build itself.** Transactions appear with merchant, amount, and category — auto-matched against a built-in merchant database. Correct one once and the rule sticks.
 3. **Stay on budget.** Set a monthly limit and see exactly what's left per day. Insights compare the month with the one before, show your daily rhythm, top merchants and a six-month trend.
 4. **Catch the leaks.** Recurring payments are detected and predicted; subscriptions (Netflix, Spotify, Prime…) are spotted from billing emails and listed with renewal dates.
 5. **Ask anything.** Optionally download the on-device AI model once, then ask natural questions — "how much on food this month?" — answered offline, from your data only.
-6. **Keep it yours.** App lock, CSV export, and backups you can save anywhere and restore. Everything lives in a local database on your phone — clear it all from Settings any time.
+6. **Keep it yours.** App lock, receipt photos, CSV export, and backups you can save anywhere and restore. Everything lives in a local database on your phone — clear it all from Settings any time.

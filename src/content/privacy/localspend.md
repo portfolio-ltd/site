@@ -1,6 +1,6 @@
 ---
 app: "LocalSpend"
-lastUpdated: "2026-10-29"
+lastUpdated: "2026-11-13"
 ---
 
 ## Overview
@@ -13,7 +13,7 @@ LocalSpend handles some of your most sensitive information, your financial trans
 
 ## Data stored on your device
 
-Your transactions, budget, category rules and settings live in a private database on your phone. For each imported transaction the app also keeps the original SMS text, or a short excerpt of the email, so you can see where it came from. If you connect Gmail, the app stores the account's email address on your phone to show which account is connected.
+Your transactions, budget, category rules and settings live in a private database on your phone. For each imported transaction the app also keeps the original SMS text, or a short excerpt of the email, so you can see where it came from. If you connect Gmail or another mailbox, the app stores the account's email address on your phone to show which account is connected. Receipt photos you attach are kept in the app's storage on your phone.
 
 ## SMS reading (Android only)
 
@@ -27,13 +27,25 @@ LocalSpend's use and transfer of information received from Google APIs adheres t
 
 You can disconnect an account in Settings at any time. You can also revoke access at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 
+## Other mailboxes (optional)
+
+If you add a mailbox from another provider (iCloud, Yahoo, Zoho or any IMAP server), LocalSpend connects from your phone straight to that provider over an encrypted connection and reads bank alert emails the same way, read-only. The app-specific password you enter is kept in your phone's keychain or keystore and is sent only to that mail provider. It is never sent to us.
+
+## Alerts you share or paste (optional)
+
+You can share a bank alert to LocalSpend from another app, paste one, or set up an automation that passes alerts to it. The text is read on your phone to find the transaction and is not sent anywhere.
+
+## Receipt photos (optional)
+
+You can attach a photo of a bill to a transaction, from the camera or by picking one photo. Only the photo you choose is used. It is saved on your phone and is never uploaded.
+
 ## On-device AI assistant (optional)
 
 The "Ask" feature uses a language model that runs entirely on your phone. Turning it on triggers a **one-time download of the model file** (about 610 MB, or 1.6 GB if you choose the larger model) from Hugging Face's servers. The download contains no information about you, and your questions and answers are processed offline, on your phone.
 
 ## Other network activity
 
-There is none. Apart from Gmail import and the optional model download, LocalSpend makes no network requests. Its fonts are built into the app.
+There is none. Apart from Gmail import, mailboxes you add yourself and the optional model download, LocalSpend makes no network requests. Its fonts are built into the app.
 
 ## Exports and backups
 
@@ -41,11 +53,11 @@ CSV exports and backup files are created on your phone. They go only where you c
 
 ## Permissions
 
-**Android:** SMS (transaction import), notifications (a reminder when a regular payment is due), biometrics (app lock), internet (Gmail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment reminders), and a photo-library notice required by the file picker used to choose a backup to restore. LocalSpend never reads your photos.
+**Android:** SMS (transaction import), notifications (a reminder when a regular payment is due, and an alert when spending reaches a budget you set), biometrics (app lock), camera (only when you take a receipt photo), internet (mail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment reminders and budget alerts), camera (only when you take a receipt photo), and photo library access limited to the one photo or backup file you pick. LocalSpend never browses your photo library.
 
 ## Data deletion
 
-**Settings → Clear all data** deletes every transaction, setting, connected account and on-device backup. Uninstalling the app also removes all of its data. There is no server-side copy, because none exists.
+**Settings → Clear all data** deletes every transaction, setting, connected account, saved mailbox password, receipt photo, the downloaded Ask model and the on-device backup. Uninstalling the app also removes all of its data. There is no server-side copy, because none exists.
 
 ## Children's privacy
 
