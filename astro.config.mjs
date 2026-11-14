@@ -8,7 +8,9 @@ export default defineConfig({
   redirects: {
     '/apps/streaks': '/apps/notchday',
     '/apps/streaks/privacy': '/apps/notchday/privacy',
-    '/apps/anchor': '/apps/commitline',
-    '/apps/anchor/privacy': '/apps/commitline/privacy',
+    '/apps/anchor': '/apps/shoodle',
+    '/apps/anchor/privacy': '/apps/shoodle/privacy',
+    '/apps/commitline': '/apps/shoodle',
+    '/apps/commitline/privacy': '/apps/shoodle/privacy',
   },
 });

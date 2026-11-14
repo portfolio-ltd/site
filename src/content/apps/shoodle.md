@@ -1,21 +1,21 @@
 ---
-name: "Commitline"
+name: "Shoodle"
 tagline: "A small doodle that sends your distractions away."
 platforms: [mac, web]
 order: 3
-icon: /apps/commitline/icon.png
+icon: /apps/shoodle/icon.png
 accent: "#6B38FF"
 screenshots:
-  - src: /apps/commitline/mac-1.png
+  - src: /apps/shoodle/mac-1.png
     alt: "The doodle appears over a distracting app with a countdown: Not now. Hiding TV in 3"
     kind: desktop
-  - src: /apps/commitline/mac-2.png
+  - src: /apps/shoodle/mac-2.png
     alt: "The menu-bar popover: a running session, the list of apps to hide and the warning time"
     kind: desktop
-  - src: /apps/commitline/mac-3.png
+  - src: /apps/shoodle/mac-3.png
     alt: "The browser extension covering a distracting site before closing the tab"
     kind: desktop
-  - src: /apps/commitline/mac-4.png
+  - src: /apps/shoodle/mac-4.png
     alt: "No account, no tracking, no Accessibility or screen recording access"
     kind: desktop
 techStack: [Swift, SwiftUI, AppKit, WebExtensions (Manifest V3), Safari Web Extension]
@@ -32,16 +32,16 @@ faq:
   - q: "What permissions does it need?"
     a: "On the Mac, none: no Accessibility, no screen recording, no Automation. It only learns which app has come to the front. The browser extension checks the address of the page you open against your list and never reads what is on the page."
   - q: "Can I get around it?"
-    a: "Yes. You can stop the session from the menu bar or the extension at any time. Commitline is a nudge that makes drifting take effort, not a lock."
-  - q: "What happened to checkpoints, detour passes and the iPhone app?"
-    a: "They're gone. Commitline was rebuilt from scratch to do one thing with almost no setup. There is no iPhone version, because iOS does not let one app hide or close another."
-  - q: "Is Commitline free?"
-    a: "The beta is completely free: no payment info, no trial countdown. Pricing after beta isn't final; beta testers will be looked after."
+    a: "Yes. You can stop the session from the menu bar or the extension at any time. Shoodle is a nudge that makes drifting take effort, not a lock."
+  - q: "Is this the app that used to be Commitline?"
+    a: "Yes. Commitline (and before that, Anchor) is now Shoodle. Checkpoints, detour passes and the iPhone app are gone. It was rebuilt from scratch to do one thing with almost no setup. There is no iPhone version, because iOS does not let one app hide or close another."
+  - q: "Is Shoodle free?"
+    a: "Yes. Shoodle is free, with no ads, no in-app purchases and no account."
 changelog:
-  - version: "1.0.0 (new Commitline)"
+  - version: "1.0.0 (Shoodle)"
     date: "2026-11-15"
     notes:
-      - "Rebuilt from scratch around one idea: a doodle that sends distractions away"
+      - "Commitline is now Shoodle, rebuilt from scratch around one idea: a doodle that sends distractions away"
       - "Mac: pick the apps to hide, start a 25 or 50 minute session, or run until you stop"
       - "Browser extension for Safari, Chrome, Edge, Brave and Firefox that closes distracting tabs"
       - "No permissions to grant on the Mac, and nothing stored outside your device"
@@ -62,9 +62,9 @@ changelog:
 
 ## What it is
 
-Commitline is a small doodle that lives in your Mac's menu bar and in your browser. Tell it which apps and sites pull you away, start a session, and get on with your work. The moment you open one of them, the doodle shows up, counts down, and sends it away.
+Shoodle is a small doodle that lives in your Mac's menu bar and in your browser. Tell it which apps and sites pull you away, start a session, and get on with your work. The moment you open one of them, the doodle shows up, counts down, and sends it away.
 
-There is nothing to plan, log or review. No account, no server, no third-party SDKs.
+There is nothing to plan, log or review. It is free, with no account, no server and no third-party SDKs.
 
 ## How it works
 

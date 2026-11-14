@@ -1,15 +1,15 @@
 ---
-app: "Commitline"
+app: "Shoodle"
 lastUpdated: "2026-11-15"
 ---
 
 ## Overview
 
-Commitline (formerly Anchor) is a Mac menu-bar app and a browser extension. During a session you start, it hides the apps and closes the browser tabs on a list you choose. This policy explains what it stores, what it can see, and what never happens.
+Shoodle (formerly Commitline, and before that Anchor) is a Mac menu-bar app and a browser extension. During a session you start, it hides the apps and closes the browser tabs on a list you choose. This policy explains what it stores, what it can see, and what never happens.
 
 ## Data we collect
 
-**We do not collect any data.** Commitline has no server, no account system, no analytics, no crash reporting and no third-party SDKs. Neither the Mac app nor the browser extension makes network requests of its own. The Mac app's Apple privacy manifest declares no tracking and no collected data.
+**We do not collect any data.** Shoodle has no server, no account system, no analytics, no crash reporting and no third-party SDKs. Neither the Mac app nor the browser extension makes network requests of its own. The Mac app's Apple privacy manifest declares no tracking and no collected data.
 
 ## What the Mac app stores on your Mac
 
@@ -39,7 +39,7 @@ Deleting the Mac app removes everything it stored. Removing the browser extensio
 
 ## Children's privacy
 
-Commitline does not collect data from anyone, including children under 13.
+Shoodle does not collect data from anyone, including children under 13.
 
 ## Changes to this policy
 

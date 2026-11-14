@@ -30,9 +30,9 @@ That's it — the homepage grid and all pages are generated automatically.
 
   ```yaml
   screenshots:
-    - src: /apps/commitline/screenshot-1.png
+    - src: /apps/shoodle/screenshot-1.png
       alt: "Today dashboard"                # phone (default)
-    - src: /apps/commitline/mac-1.png
+    - src: /apps/shoodle/mac-1.png
       alt: "Menu bar app on Mac"
       kind: desktop                          # wide capture, rendered shorter
   ```
