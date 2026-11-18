@@ -1,6 +1,6 @@
 ---
 app: "NutriTrack"
-lastUpdated: "2026-11-09"
+lastUpdated: "2026-11-18"
 ---
 
 ## Overview
@@ -11,13 +11,17 @@ NutriTrack keeps your food diary on your device and talks to the internet only t
 
 **We do not operate any servers and do not collect your personal data.** NutriTrack has no analytics, no advertising, no crash reporting, and no tracking of any kind.
 
-## Your account stays on your device
+## No account
 
-NutriTrack asks you to create a profile, but that account exists only on your phone: your credentials are stored securely in the device Keychain and are never transmitted anywhere. You can also use Sign in with Apple, which shares at most your name and (optionally hidden) email with the app — again stored only on your device. Deleting your account in Profile wipes all app data, credentials, and notifications.
+From version 1.1, NutriTrack has no sign-in of any kind: you answer one setup screen and start tracking. Version 1.0 offered an optional email or Sign in with Apple profile that was stored only on your device and never transmitted; after updating, that sign-in is no longer used and your diary carries over as it is.
 
 ## Data stored on your device
 
-Your food diary, custom foods, saved foods and recipes, missions, streaks, hydration and sleep logs, supplements (doses, reminder times and the days you mark them taken), and settings are stored locally using Apple's SwiftData. So are the onboarding answers used to calculate your daily targets: name, age, sex (optional), height, weight, activity level, goal, weekly pace and dietary preferences. The widget reads a summary through a private App Group shared only with the app. There is no cloud sync.
+Your food diary, custom and saved foods, recipes, supplements (doses, reminder times and the days you mark them taken), streak, optional hydration and sleep logs, and settings are stored locally using Apple's SwiftData. So are the setup answers used to calculate your daily targets: age, sex (optional), height, weight, activity level, goal and dietary preferences, plus a name if you choose to add one. The widget reads a summary through a private App Group shared only with the app. There is no cloud sync.
+
+## Importing text from other apps
+
+You can bring a meal or recipe into NutriTrack from another app, for example a reply from ChatGPT, by sharing the text to NutriTrack or by copying it and tapping Paste in the app. The text is read **on your device** to find food names and nutrition values; it is not sent to us, to an AI service, or to anyone else. Shared text is held in the private App Group only until the app opens it. NutriTrack checks whether your clipboard contains text so it can offer to import it, but it reads the contents only when you tap Paste.
 
 ## Food database lookups
 
@@ -48,7 +52,7 @@ Nutrition targets and supplement information in NutriTrack are general estimates
 
 ## Data deletion
 
-Use "Delete Account" in Profile to erase everything, or simply delete the app. Health data you wrote can be removed from the Health app.
+Use "Erase all data" in Profile to erase everything, or simply delete the app. Health data you wrote can be removed from the Health app.
 
 ## Children's privacy
 
