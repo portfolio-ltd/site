@@ -1,15 +1,15 @@
 ---
-app: "LocalSpend"
-lastUpdated: "2026-11-13"
+app: "Alertbook"
+lastUpdated: "2026-11-18"
 ---
 
 ## Overview
 
-LocalSpend handles some of your most sensitive information, your financial transactions, so it keeps that data on your device. It has no account, no server and no analytics. This policy explains exactly what the app does, including the few times it uses the internet.
+Alertbook handles some of your most sensitive information, your financial transactions, so it keeps that data on your device. It has no account, no server and no analytics. This policy explains exactly what the app does, including the few times it uses the internet.
 
 ## Data we collect
 
-**We do not collect your personal data.** LocalSpend has no server, no user accounts, no analytics, no crash reporting and no advertising. Your transactions are never uploaded anywhere, and we never receive them.
+**We do not collect your personal data.** Alertbook has no server, no user accounts, no analytics, no crash reporting and no advertising. Your transactions are never uploaded anywhere, and we never receive them.
 
 ## Data stored on your device
 
@@ -17,23 +17,23 @@ Your transactions, budget, category rules and settings live in a private databas
 
 ## SMS reading (Android only)
 
-With your permission (`READ_SMS`, `RECEIVE_SMS`), LocalSpend reads text messages to find bank, card and UPI transaction alerts. Each message is checked on your phone. OTPs, promotions and personal messages are skipped, and messages are never sent anywhere.
+With your permission (`READ_SMS`, `RECEIVE_SMS`), Alertbook reads text messages to find bank, card and UPI transaction alerts. Each message is checked on your phone. OTPs, promotions and personal messages are skipped, and messages are never sent anywhere.
 
 ## Gmail import (optional)
 
-If you connect a Gmail account, LocalSpend uses Google Sign-In to request **read-only** Gmail access (`gmail.readonly`). It reads bank alert emails on your phone to find transactions. It cannot send, change or delete email, and email content is never sent to us or anyone else. Google's handling of the sign-in itself is governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+If you connect a Gmail account, Alertbook uses Google Sign-In to request **read-only** Gmail access (`gmail.readonly`). It reads bank alert emails on your phone to find transactions. It cannot send, change or delete email, and email content is never sent to us or anyone else. Google's handling of the sign-in itself is governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
-LocalSpend's use and transfer of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Gmail data is used only to show you your own transactions in the app. It is not used for advertising, it is not sold or shared, and no person reads it.
+Alertbook's use and transfer of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Gmail data is used only to show you your own transactions in the app. It is not used for advertising, it is not sold or shared, and no person reads it.
 
 You can disconnect an account in Settings at any time. You can also revoke access at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 
 ## Other mailboxes (optional)
 
-If you add a mailbox from another provider (iCloud, Yahoo, Zoho or any IMAP server), LocalSpend connects from your phone straight to that provider over an encrypted connection and reads bank alert emails the same way, read-only. The app-specific password you enter is kept in your phone's keychain or keystore and is sent only to that mail provider. It is never sent to us.
+If you add a mailbox from another provider (iCloud, Yahoo, Zoho or any IMAP server), Alertbook connects from your phone straight to that provider over an encrypted connection and reads bank alert emails the same way, read-only. The app-specific password you enter is kept in your phone's keychain or keystore and is sent only to that mail provider. It is never sent to us.
 
 ## Alerts you share or paste (optional)
 
-You can share a bank alert to LocalSpend from another app, paste one, or set up an automation that passes alerts to it. The text is read on your phone to find the transaction and is not sent anywhere.
+You can share a bank alert to Alertbook from another app, paste one, or set up an automation that passes alerts to it. The text is read on your phone to find the transaction and is not sent anywhere.
 
 ## Receipt photos (optional)
 
@@ -45,7 +45,7 @@ The "Ask" feature uses a language model that runs entirely on your phone. Turnin
 
 ## Other network activity
 
-There is none. Apart from Gmail import, mailboxes you add yourself and the optional model download, LocalSpend makes no network requests. Its fonts are built into the app.
+There is none. Apart from Gmail import, mailboxes you add yourself and the optional model download, Alertbook makes no network requests. Its fonts are built into the app.
 
 ## Exports and backups
 
@@ -53,7 +53,7 @@ CSV exports and backup files are created on your phone. They go only where you c
 
 ## Permissions
 
-**Android:** SMS (transaction import), notifications (a reminder when a regular payment is due, and an alert when spending reaches a budget you set), biometrics (app lock), camera (only when you take a receipt photo), internet (mail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment reminders and budget alerts), camera (only when you take a receipt photo), and photo library access limited to the one photo or backup file you pick. LocalSpend never browses your photo library.
+**Android:** SMS (transaction import), notifications (a reminder when a regular payment is due, and an alert when spending reaches a budget you set), biometrics (app lock), camera (only when you take a receipt photo), internet (mail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment reminders and budget alerts), camera (only when you take a receipt photo), and photo library access limited to the one photo or backup file you pick. Alertbook never browses your photo library.
 
 ## Data deletion
 
@@ -61,7 +61,7 @@ CSV exports and backup files are created on your phone. They go only where you c
 
 ## Children's privacy
 
-LocalSpend is meant for adults managing their own money. It does not knowingly collect any data from anyone, including children under 13.
+Alertbook is meant for adults managing their own money. It does not knowingly collect any data from anyone, including children under 13.
 
 ## Changes to this policy
 
