@@ -1,13 +1,13 @@
 ---
-name: "LocalSpend"
-tagline: "Your spending, tracked automatically — and privately."
+name: "Alertbook"
+tagline: "Your bank alerts, filed into a ledger — on your phone, privately."
 platforms: [ios, android]
 order: 4
 icon: /apps/localspend/icon.png
-accent: "#8B5CF6"
+accent: "#F0522B"
 screenshots:
   - src: /apps/localspend/screenshot-1.png
-    alt: "Every rupee, sorted: the month's spend against the budget, with the ledger below"
+    alt: "Your bank alerts, filed for you: the month against the budget, the alert inbox, and the ledger"
   - src: /apps/localspend/screenshot-2.png
     alt: "See where it all went: Insights with budget health and a daily spending chart"
   - src: /apps/localspend/screenshot-3.png
@@ -21,23 +21,25 @@ screenshots:
 techStack: [Flutter, Riverpod, Drift (SQLite), On-device LLM (Qwen3), fl_chart]
 supportEmail: hello@sagarchandagarwal.com
 faq:
-  - q: "Does LocalSpend connect to my bank?"
+  - q: "Does Alertbook connect to my bank?"
     a: "No — and that's the point. It never asks for bank credentials or uses an account aggregator. Instead it reads the transaction alerts your bank already sends you (SMS on Android, bank alert emails on both platforms) and parses them entirely on your device."
   - q: "How does it work on iPhone?"
-    a: "iOS doesn't let apps read SMS, so on iPhone and iPad LocalSpend reads your bank alert emails instead: Gmail with read-only access, or iCloud, Yahoo, Zoho and other mailboxes with an app password. You can also share an alert from Messages or Mail, set up a Shortcuts automation, or add a spend by hand. On Android you get SMS auto-import too."
+    a: "iOS doesn't let apps read SMS, so on iPhone and iPad Alertbook reads your bank alert emails instead: Gmail with read-only access, or iCloud, Yahoo, Zoho and other mailboxes with an app password. You can also share an alert from Messages or Mail, set up a Shortcuts automation, or add a spend by hand. On Android you get SMS auto-import too."
   - q: "Is the AI assistant private?"
     a: "Yes. The 'Ask' feature runs a small language model entirely on your phone. It's off by default and an optional one-time download (about 610 MB); after that, questions like 'what did I spend on food this month?' are answered offline. Your transactions never leave the device."
   - q: "Which banks and currencies are supported?"
-    a: "LocalSpend is built for India: it understands alerts from major banks (HDFC, SBI, ICICI, Axis, Kotak and more) and UPI apps (GPay, PhonePe, Paytm, BHIM), and tracks amounts in ₹ INR."
+    a: "Alertbook is built for India: it understands alerts from major banks (HDFC, SBI, ICICI, Axis, Kotak and more) and UPI apps (GPay, PhonePe, Paytm, BHIM), and tracks amounts in ₹ INR."
   - q: "Can I export or back up my data?"
     a: "Yes — export everything to CSV, or back up to a file you save anywhere (Drive, Files, email) and restore it on any phone. Automatic backups run on your device: daily, weekly or monthly on Android, and once a day when you open the app on iPhone."
   - q: "Is it free?"
     a: "Completely free. No ads, no in-app purchases, no subscription."
 changelog:
   - version: "2.9.0"
-    date: "2026-11-13"
+    date: "2026-11-18"
     notes:
-      - "New violet look, and a quicker start: four screens, with your own numbers on the last one"
+      - "LocalSpend is now Alertbook, with a new icon and a flatter, lighter design"
+      - "Home leads with your bank alerts: how many were filed this month, and a tap to read new ones"
+      - "A quicker start: four screens, with your own numbers on the last one"
       - "Bill and budget alerts you can switch on in Settings"
       - "More bank alerts recognised, and fewer false ones from shops and friends"
       - "Other mailboxes (iCloud, Yahoo, Zoho), receipt photos and split bills"
@@ -76,13 +78,13 @@ changelog:
 
 ## What it is
 
-LocalSpend is a privacy-first expense tracker built for India. Instead of asking you to type in every chai and auto ride, it builds your ledger automatically — parsing the transaction SMS and email alerts your bank already sends, entirely on your device. No bank logins, no server, no account, no analytics.
+Alertbook (formerly LocalSpend) is a privacy-first expense tracker built for India. Instead of asking you to type in every chai and auto ride, it builds your ledger automatically — parsing the transaction SMS and email alerts your bank already sends, entirely on your device. No bank logins, no server, no account, no analytics.
 
 It categorises transactions against 670+ known merchants, watches your monthly budget, detects recurring payments and subscriptions, and can even answer questions about your spending with an AI that runs completely offline.
 
 ## How it works
 
-1. **Connect your alerts.** Grant SMS access on Android, or connect the inbox your bank writes to: Gmail (read-only) or another mailbox, on either platform. LocalSpend recognises alerts from major Indian banks, cards, and UPI apps.
+1. **Connect your alerts.** Grant SMS access on Android, or connect the inbox your bank writes to: Gmail (read-only) or another mailbox, on either platform. Alertbook recognises alerts from major Indian banks, cards, and UPI apps.
 2. **Watch the ledger build itself.** Transactions appear with merchant, amount, and category — auto-matched against a built-in merchant database. Correct one once and the rule sticks.
 3. **Stay on budget.** Set a monthly limit and see exactly what's left per day. Insights compare the month with the one before, show your daily rhythm, top merchants and a six-month trend.
 4. **Catch the leaks.** Recurring payments are detected and predicted; subscriptions (Netflix, Spotify, Prime…) are spotted from billing emails and listed with renewal dates.
