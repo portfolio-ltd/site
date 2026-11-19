@@ -1,6 +1,6 @@
 ---
 app: "Alertbook"
-lastUpdated: "2026-11-18"
+lastUpdated: "2026-11-19"
 ---
 
 ## Overview
@@ -53,7 +53,7 @@ CSV exports and backup files are created on your phone. They go only where you c
 
 ## Permissions
 
-**Android:** SMS (transaction import), notifications (a reminder when a regular payment is due, and an alert when spending reaches a budget you set), biometrics (app lock), camera (only when you take a receipt photo), internet (mail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment reminders and budget alerts), camera (only when you take a receipt photo), and photo library access limited to the one photo or backup file you pick. Alertbook never browses your photo library.
+**Android:** SMS (transaction import), notifications (a note when a payment or credit is filed from a bank alert, a reminder when a regular payment is due, and an alert when spending reaches a budget you set), biometrics (app lock), camera (only when you take a receipt photo), internet (mail import and the model download), and starting at boot so background imports keep running. **iOS:** Face ID (app lock), notifications (payment alerts, payment reminders and budget alerts), camera (only when you take a receipt photo), and photo library access limited to the one photo or backup file you pick. Alertbook never browses your photo library.
 
 ## Data deletion
 
