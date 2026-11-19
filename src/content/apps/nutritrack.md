@@ -1,6 +1,6 @@
 ---
 name: "NutriTrack"
-tagline: "A crisp calorie tracker that knows your food."
+tagline: "Just tell it what you ate."
 platforms: [ios]
 order: 2
 icon: /apps/nutritrack/icon.png
@@ -9,7 +9,7 @@ storeLinks:
   appStore: https://apps.apple.com/us/app/nutritrack-health-hero/id6795206336
 screenshots:
   - src: /apps/nutritrack/screenshot-1.jpg
-    alt: "Today: calorie ring, macros, today's meals and supplements"
+    alt: "Today: typing '2 roti, dal tadka and a bowl of dahi' and seeing it read into items"
   - src: /apps/nutritrack/screenshot-2.jpg
     alt: "Importing a meal shared from ChatGPT, with each item's numbers filled in"
   - src: /apps/nutritrack/screenshot-3.jpg
@@ -23,6 +23,8 @@ screenshots:
 techStack: [Swift, SwiftUI, SwiftData, HealthKit, AVFoundation, WidgetKit, Swift Charts]
 supportEmail: hello@sagarchandagarwal.com
 faq:
+  - q: "How do I log a meal?"
+    a: "Just type it. Write '2 roti, dal, curd' in the box on Today and NutriTrack reads the dishes and amounts as you type; one tap logs them. You can also search, scan a barcode, or paste a meal from ChatGPT into the same box."
   - q: "What makes NutriTrack different from other calorie counters?"
     a: "It's built for the way India and Asia actually eat, and it stays out of your way. Over 480 dishes work offline with the names you use (search 'dahi', 'chawal', 'bhindi' or 'kway teow'), there's no account to create, and the whole app is three tabs: Today, Add and Progress."
   - q: "Can I bring in a meal I worked out with ChatGPT?"
@@ -30,7 +32,7 @@ faq:
   - q: "What kind of text can it import?"
     a: "One item per line with numbers ('Dal tadka — 210 kcal, 10g protein'), a recipe with a nutrition block, or just names ('2 roti, dal, curd'), which use NutriTrack's own values and are marked as estimates. You can edit any number before saving."
   - q: "Do I need an account?"
-    a: "No. From version 1.1 there is no sign-in at all. Answer one setup screen and you're tracking. Everything stays on your device, and Profile → Erase all data removes it."
+    a: "No. From version 1.2 there is no sign-in at all. Answer one setup screen and you're tracking. Everything stays on your device, and Profile → Erase all data removes it."
   - q: "How does NutriTrack set my calorie target?"
     a: "One setup screen asks your goal, activity, age, height and weight, then works out daily calories, protein, carbs and fat using the Mifflin-St Jeor equation. It's a starting point you can adjust at any time."
   - q: "Can I track supplements?"
@@ -44,16 +46,17 @@ faq:
   - q: "Is it private? Is it free?"
     a: "Your diary, plan and supplements live entirely on your device. There's no server, no ads and no analytics. NutriTrack is completely free: no subscription and no locked features."
 changelog:
-  - version: "1.1"
-    date: "2026-11-18"
+  - version: "1.2"
+    date: "2026-11-19"
     notes:
+      - "Just type it: write '2 roti, dal, curd' on Today and it's logged"
       - "No account needed: one setup screen, then start tracking"
       - "Import from ChatGPT: share or copy a meal or recipe and NutriTrack fills in the items and numbers"
       - "Supplements: daily checklist, reminders and a 37-item reference library"
       - "Three simple tabs: Today, Add and Progress"
       - "480+ offline Indian and Asian dishes, plus country-first product search"
       - "Now on iPad, with landscape and Split View"
-      - "New design and icon, readable light mode, and many fixes"
+      - "New design, a new icon with Bite the mascot, readable light mode, and many fixes"
   - version: "1.0"
     date: "2026-08-14"
     notes:
@@ -65,14 +68,14 @@ changelog:
 
 ## What it is
 
-NutriTrack is a crisp calorie and macro tracker for iPhone and iPad, built for the way India and Asia actually eat. Over 480 dishes, from poha and dal tadka to ramen and nasi lemak, work offline with household servings and regional names.
+Just tell NutriTrack what you ate. Type "2 roti, dal, curd" and it's logged, with calories and macros worked out. It's a crisp tracker for iPhone and iPad, built for the way India and Asia actually eat. Over 480 dishes, from poha and dal tadka to ramen and nasi lemak, work offline with household servings and regional names.
 
 It also takes what you've already worked out elsewhere: share or copy a meal from ChatGPT or any assistant and NutriTrack fills in the items and numbers, without calling an AI service itself. There's no account, and everything stays on your device.
 
 ## How it works
 
 1. **Set up in under a minute.** One screen (goal, activity, age, height, weight) gives you a daily calorie, protein, carb and fat target. No sign-up.
-2. **Log meals in seconds.** Search in the words you use, tap a household portion (a bowl, a piece, a glass) and you're done. Or scan a barcode.
-3. **Import from ChatGPT.** Copy a reply and open NutriTrack, or choose Share → NutriTrack. Check each item against the original line, edit if needed, and add it. Save dishes to reuse.
+2. **Just type it.** Write a meal the way you'd say it in the box on Today. NutriTrack reads the dishes and amounts as you type, and one tap logs them. You can also search or scan a barcode.
+3. **Import from ChatGPT.** Paste a reply into the same box, or choose Share → NutriTrack. Check each item against the original line, edit if needed, and add it. Save dishes to reuse.
 4. **Keep your supplements on track.** Add vitamins, minerals, protein powders or Ayurvedic staples from the reference library and tick them off each day.
 5. **See your week.** Progress shows calories, macro averages, your streak and how often you took your supplements.

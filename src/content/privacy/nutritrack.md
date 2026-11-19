@@ -1,6 +1,6 @@
 ---
 app: "NutriTrack"
-lastUpdated: "2026-11-18"
+lastUpdated: "2026-11-19"
 ---
 
 ## Overview
@@ -13,7 +13,7 @@ NutriTrack keeps your food diary on your device and talks to the internet only t
 
 ## No account
 
-From version 1.1, NutriTrack has no sign-in of any kind: you answer one setup screen and start tracking. Version 1.0 offered an optional email or Sign in with Apple profile that was stored only on your device and never transmitted; after updating, that sign-in is no longer used and your diary carries over as it is.
+From version 1.2, NutriTrack has no sign-in of any kind: you answer one setup screen and start tracking. Earlier versions offered an optional email or Sign in with Apple profile that was stored only on your device and never transmitted; after updating, that sign-in is no longer used and your diary carries over as it is.
 
 ## Data stored on your device
 
@@ -21,7 +21,7 @@ Your food diary, custom and saved foods, recipes, supplements (doses, reminder t
 
 ## Importing text from other apps
 
-You can bring a meal or recipe into NutriTrack from another app, for example a reply from ChatGPT, by sharing the text to NutriTrack or by copying it and tapping Paste in the app. The text is read **on your device** to find food names and nutrition values; it is not sent to us, to an AI service, or to anyone else. Shared text is held in the private App Group only until the app opens it. NutriTrack checks whether your clipboard contains text so it can offer to import it, but it reads the contents only when you tap Paste.
+You can bring a meal or recipe into NutriTrack from another app, for example a reply from ChatGPT, by sharing the text to NutriTrack or by copying it and tapping Paste in the app. The text is read **on your device** to find food names and nutrition values; it is not sent to us, to an AI service, or to anyone else. Shared text is held in the private App Group only until the app opens it. NutriTrack reads your clipboard only when you tap Paste. Meals you type into the app are read the same way, on your device.
 
 ## Food database lookups
 
